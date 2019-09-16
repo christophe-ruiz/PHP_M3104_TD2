@@ -2,7 +2,6 @@
     $action = $_POST['action'];
     if ($action == 'Mailer') {
         $id = $_POST['id'];
-        $login = $_POST['login'];
         $sexe = $_POST['sexe'];
         $email = $_POST['mail'];
         $pwd = $_POST['pwd'];
@@ -35,7 +34,7 @@
 
     $today = date('Y-m-d');
     $query = 'INSERT INTO user (login, sexe, email, password, phone, pays, date)';
-    $query .= ' VALUES (\'' . $login . '\',  \'' . $sexe . '\', \'' . $email . '\', \'' . $pwd . '\', ' . $phone . ', \'' . $pays . '\', NOW());';
+    $query .= ' VALUES (\'' . $id . '\',  \'' . $sexe . '\', \'' . $email . '\', \'' . $pwd . '\', ' . $phone . ', \'' . $pays . '\', NOW());';
 
     if(!($dbResult = mysqli_query($dbLink, $query)))
     {
