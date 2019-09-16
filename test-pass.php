@@ -19,7 +19,7 @@
         // Affiche la requête envoyée.
         echo 'Requête : ' . $query . '<br/>';
         exit();
-    } else if (isset($_POST['action'])) {
+    } else if (isset($_POST['action']) && isset($login) && isset($pwd)) {
         while ($fetch = mysqli_fetch_assoc($dbQuery))
             if ($login == $fetch['login'] && $pwd == $fetch['password']) {
                 start_page('Bienvenue');
