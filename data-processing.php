@@ -2,8 +2,7 @@
     $action = $_POST['action'];
     if ($action == 'Mailer') {
         $id = $_POST['id'];
-        if (isset($_POST['male'])) $sexe = $_POST['male'];
-        else if (isset($_POST['female'])) $sexe = $_POST['female'];
+        $sexe = $_POST['male'];
         $email = $_POST['mail'];
         $pwd = $_POST['pwd'];
         $verifPwd = $_POST['verifPwd'];
