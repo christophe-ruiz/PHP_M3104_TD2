@@ -10,6 +10,13 @@
         $phone = $_POST['phone'];
         $pays = $_POST['pays'];
         $cgu = $_POST['cgu'];
+
+        $message = 'Identifiant: ' . $id . PHP_EOL;
+        $message .= 'Sexe : ' . $sexe . PHP_EOL;
+        $message .= 'E-mail : ' . $email . PHP_EOL;
+        $message .= 'Password : ' . $pwd . PHP_EOL;
+        $message .= 'Téléphone : ' . $phone . PHP_EOL;
+        $message .= 'Pays : ' . $pays . PHP_EOL;
     } else {
         echo '<br/><strong>Bouton non géré !</strong><br/>';
     }
