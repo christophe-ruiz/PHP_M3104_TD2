@@ -1,6 +1,4 @@
 <?php
-    echo $_POST['pays'];
-/*
     $action = $_POST['action'];
     if ($action == 'Mailer') {
         $id = $_POST['id'];
@@ -10,8 +8,8 @@
         $pwd = $_POST['pwd'];
         $verifPwd = $_POST['verifPwd'];
         $phone = $_POST['phone'];
-        $pays = $_POST['pa'];
+        $pays = $_POST['pays'];
+        $cgu = $_POST['cgu'];
     } else {
         echo '<br/><strong>Bouton non géré !</strong><br/>';
     }
-*/

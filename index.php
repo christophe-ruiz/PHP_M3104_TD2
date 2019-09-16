@@ -15,10 +15,10 @@
         <input type="text" name="phone" placeholder="Téléphone">
         <select id="pays" name="pays">
             <option value="">Selectionner Pays</option>
-            <option value="france" name="fr">France</option>
-            <option value="belgique" name="bg">Belgique</option>
-            <option value="monaco" name="mn">Monaco</option>
-            <option value="autre" name="autre">Autre</option>
+            <option value="France" name="fr">France</option>
+            <option value="Belgique" name="bg">Belgique</option>
+            <option value="Monaco" name="mn">Monaco</option>
+            <option value="Autre" name="autre">Autre</option>
         </select>
         <input type="checkbox" id="cgu" name="cgu">
         <label for="cgu">J'accepte les Conditions Générales d'Utilisation</label>
