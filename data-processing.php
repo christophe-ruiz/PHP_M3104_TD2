@@ -34,7 +34,7 @@
 
     $today = date('Y-m-d');
     $query = 'INSERT INTO user (\'sexe\', \'email\', \'password\', \'phone\', \'pays\', \'date\')';
-    $query .= ' VALUES (\'' . $sexe . '\', \'' . $email . '\', \'' . $pwd . '\', \'' . $phone . '\', \'' . $pays . '\', \'' . $today . '\');';
+    $query .= ' VALUES (\'' . $sexe . '\', \'' . $email . '\', \'' . $pwd . '\', ' . $phone . ', \'' . $pays . '\', \'' . $today . '\');';
 
     if(!($dbResult = mysqli_query($dbLink, $query)))
     {
