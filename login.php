@@ -3,8 +3,8 @@
     start_page('Pass');
 ?>
 <form method="POST" action="test-pass.php">
-    <input type="text" name="login">
-    <input type="password" name="pwd">
-    <button name="action" type="submit"></button>
+    <input type="text" name="login" placeholder = "Login">
+    <input type="password" name="pwd" placeholder = "Password">
+    <button name="action" type="submit"> Envoyer </button>
 </form>
 <?php end_page(); ?>

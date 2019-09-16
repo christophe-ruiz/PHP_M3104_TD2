@@ -2,6 +2,7 @@
     $action = $_POST['action'];
     if ($action == 'Mailer') {
         $id = $_POST['id'];
+        $login = $_POST['login'];
         $sexe = $_POST['sexe'];
         $email = $_POST['mail'];
         $pwd = $_POST['pwd'];
@@ -33,8 +34,8 @@
     or die('Erreur dans la sélection de la base : ' . mysqli_error($dbLink));
 
     $today = date('Y-m-d');
-    $query = 'INSERT INTO user (sexe, email, password, phone, pays, date)';
-    $query .= ' VALUES (\'' . $sexe . '\', \'' . $email . '\', \'' . $pwd . '\', ' . $phone . ', \'' . $pays . '\', NOW());';
+    $query = 'INSERT INTO user (login, sexe, email, password, phone, pays, date)';
+    $query .= ' VALUES (\'' . $login . '\',  \'' . $sexe . '\', \'' . $email . '\', \'' . $pwd . '\', ' . $phone . ', \'' . $pays . '\', NOW());';
 
     if(!($dbResult = mysqli_query($dbLink, $query)))
     {
