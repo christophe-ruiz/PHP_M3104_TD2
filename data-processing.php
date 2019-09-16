@@ -1,5 +1,5 @@
 <?php
-    echo $_POST['fr'];
+    echo $_POST['pays'];
 /*
     $action = $_POST['action'];
     if ($action == 'Mailer') {

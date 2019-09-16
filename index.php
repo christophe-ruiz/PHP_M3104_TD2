@@ -13,7 +13,7 @@
         <input type="password" name="pwd" placeholder="Mot de passe">
         <input type="password" name="verifPwd" placeholder="Vérifiez le mdp">
         <input type="text" name="phone" placeholder="Téléphone">
-        <select id="pays">
+        <select id="pays" name="pays">
             <option value="">Selectionner Pays</option>
             <option value="france" name="fr">France</option>
             <option value="belgique" name="bg">Belgique</option>
