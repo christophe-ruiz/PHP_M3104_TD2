@@ -17,6 +17,8 @@
         $message .= 'Password : ' . $pwd . PHP_EOL;
         $message .= 'Téléphone : ' . $phone . PHP_EOL;
         $message .= 'Pays : ' . $pays . PHP_EOL;
+
+        echo $message;
     } else {
         echo '<br/><strong>Bouton non géré !</strong><br/>';
     }
