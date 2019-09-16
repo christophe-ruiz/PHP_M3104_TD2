@@ -24,5 +24,5 @@
         <input name="action" type="submit" value="Mailer">
     </form>
     <a href="base.php"><button>SQL</button></a>
-    <a href="login.php"><button>SQL</button></a>
+    <a href="login.php"><button>LOGIN</button></a>
 <?php end_page(); ?>
