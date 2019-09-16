@@ -2,9 +2,8 @@
     include 'utils.inc.php';
 ?>
 <!DOCTYPE html>
-<html>
-<body>
-    <form style="display: flex; flex-direction: column; justify-content: center; align-items: center; width = 100%; height = 100%;">
+<?php start_page('TD2'); ?>
+    <form action="data-processing.php" method="post" style="display: flex; flex-direction: column; justify-content: center; align-items: center; width = 100%; height = 100%;">
         <input type="text" name="id" placeholder="Identifiant">
         <input type="radio" id="male" name="male">
         <label for="male">Homme</label>
@@ -23,7 +22,6 @@
         </select>
         <input type="checkbox" id="cgu" name="cgu">
         <label for="cgu">J'accepte les Conditions Générales d'Utilisation</label>
-        <input type="submit" value="Envoyer">
+        <input name="action" type="submit" value="Mailer">
     </form>
-</body>
-</html>
+<?php end_page(); ?>
