@@ -8,7 +8,7 @@
         <input type="radio" id="male" name="sexe" value="Homme">
         <label for="male">Homme</label>
         <input type="radio" id="female" name="sexe" value="Femme">
-        <label for="female">Femme</label>'
+        <label for="female">Femme</label>
         <input type="text" name="mail" placeholder="E-mail">
         <input type="password" name="pwd" placeholder="Mot de passe">
         <input type="password" name="verifPwd" placeholder="Vérifiez le mdp">
