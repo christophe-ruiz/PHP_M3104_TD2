@@ -9,10 +9,9 @@
     mysqli_select_db($dbLink , 'christophe_td2')
     or die('Erreur dans la sélection de la base : ' . mysqli_error($dbLink));
 
-    $login_query = 'SELECT login FROM user WHERE login =' . $login;
-    $pwd_query = 'SELECT password FROM user WHERE login =' . $login;
+    $query = 'SELECT * FROM user WHERE login =' . $login;
 
-    if(!($dbResult = mysqli_query($dbLink, $query)))
+    if(!($dbQuery = mysqli_query($dbLink, $query)))
     {
         echo 'Erreur de requête<br/>';
         // Affiche le type d'erreur.
@@ -20,10 +19,13 @@
         // Affiche la requête envoyée.
         echo 'Requête : ' . $query . '<br/>';
         exit();
-    } else if (isset($_POST['action']) && $login == $login_query && $pwd == $pwd_query) {
-        start_page('Bienvenue');
-        echo '<h1> Bienvenue ' . $login . '</h1>' . PHP_EOL;
-        end_page();
+    } else if (isset($_POST['action'])) {
+        while ($fetch = mysqli_fetch_assoc($dbQuery))
+            if ($login == $fetch['login'] && $pwd == $fetch['password']) {
+                start_page('Bienvenue');
+                echo '<h1> Bienvenue ' . $login . '</h1>' . PHP_EOL;
+                end_page();
+            }
     } else {
         header('Location: erreur.php');
     }
