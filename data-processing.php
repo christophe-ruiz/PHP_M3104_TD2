@@ -14,7 +14,7 @@
         $message .= 'Sexe : ' . $sexe . PHP_EOL;
         $message .= 'E-mail : ' . $email . PHP_EOL;
         $message .= 'Password : ' . $pwd . PHP_EOL;
-        $message .= 'Téléphone : ' . $phone . PHP_EOL;
+        $message .= 'Telephone : ' . $phone . PHP_EOL;
         $message .= 'Pays : ' . $pays . PHP_EOL;
 
         echo $message;
@@ -25,4 +25,5 @@
     if (mail('christophe.ruiz@etu.univ-amu.fr', 'mail du TD2', $message))
         echo 'Mail envoyé !';
 ?>
+<br>
 <a href=".."><button>Retour</button></a>
