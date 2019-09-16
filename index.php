@@ -4,7 +4,7 @@
 <!DOCTYPE html>
 <html>
 <body>
-    <form stlye="display: flex; justify-content: center; align-items: center; width = 100%; height = 100%;">
+    <form style="display: flex; justify-content: center; align-items: center; width = 100%; height = 100%;">
         <input type="text" name="id" placeholder="Identifiant">
         <input type="radio" id="male" name="male">
         <label for="male">Homme</label>
