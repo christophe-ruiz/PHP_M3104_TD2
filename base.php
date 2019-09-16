@@ -24,3 +24,5 @@
         echo date('d.m.Y', strtotime($dbRow['date']));
         echo '<br/><br/>';
     }
+?>
+<a href="index.php"><button>Revenir</button></a>

@@ -23,4 +23,5 @@
         <label for="cgu">J'accepte les Conditions Générales d'Utilisation</label>
         <input name="action" type="submit" value="Mailer">
     </form>
+    <a href="base.php"><button>SQL</button></a>
 <?php end_page(); ?>
