@@ -24,6 +24,29 @@
     }
     if (mail('christophe.ruiz@etu.univ-amu.fr', 'mail du TD2', $message))
         echo 'Mail envoyé !';
+    else echo 'Mail non envoyé :(';
+
+    $dbLink = mysqli_connect('mysql-christophe.alwaysdata.net', '173824', 'admin_root26+')
+    or die('Erreur de connexion au serveur : ' . mysqli_connect_error());
+
+    mysqli_select_db($dbLink , 'christophe_td2')
+    or die('Erreur dans la sélection de la base : ' . mysqli_error($dbLink));
+
+    $today = date('Y-m-d');
+    $query = 'INSERT INTO user (\'sexe\', \'email\', \'password\', \'phone\', \'pays\', \'date\')';
+    $query .= 'VALUES (\'' . $sexe . '\',\'' . $email . '\',\'' . $pwd . '\',\'' . $phone . '\',\'' . $pays . '\',\'' . $today . '\'';
+
+    if(!($dbResult = mysqli_query($dbLink, $query)))
+    {
+        echo 'Erreur de requête<br/>';
+        // Affiche le type d'erreur.
+        echo 'Erreur : ' . mysqli_error($dbLink) . '<br/>';
+        // Affiche la requête envoyée.
+        echo 'Requête : ' . $query . '<br/>';
+        exit();
+    } else {
+        echo 'Votre inscription (' . $id . ') a été enregistrée, merci' .PHP_EOL;
+    }
 ?>
 <br>
 <a href=".."><button>Retour</button></a>
