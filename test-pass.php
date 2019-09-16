@@ -9,7 +9,7 @@
     mysqli_select_db($dbLink , 'christophe_td2')
     or die('Erreur dans la sélection de la base : ' . mysqli_error($dbLink));
 
-    $query = 'SELECT * FROM user WHERE login =' . $login;
+    $query = 'SELECT * FROM user WHERE login = \'' . $login . '\'';
 
     if(!($dbQuery = mysqli_query($dbLink, $query)))
     {
