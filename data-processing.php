@@ -18,6 +18,11 @@
         $message .= 'Pays : ' . $pays . PHP_EOL;
 
         echo $message;
+
     } else {
         echo '<br/><strong>Bouton non géré !</strong><br/>';
     }
+    if (mail('christophe.ruiz@etu.univ-amu.fr', 'mail du TD2', $message))
+        echo 'Mail envoyé !';
+?>
+<a href=".."><button>Retour</button></a>
