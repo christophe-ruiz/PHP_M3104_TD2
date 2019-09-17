@@ -25,7 +25,7 @@
                 start_page('Bienvenue');
                 echo '<h1> Bienvenue ' . $login . '</h1>' . PHP_EOL;
                 end_page();
-            }  else header('Location: login.php');
+            }  else header('Location: ..');
     } else {
         header('Location: login.php');
     }
