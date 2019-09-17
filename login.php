@@ -1,6 +1,6 @@
 <?php
     include 'utils.inc.php';
-    start_page('Pass');
+    start_page('Login');
     echo $_GET['step'];
 ?>
 <form method="POST" action="test-pass.php">
