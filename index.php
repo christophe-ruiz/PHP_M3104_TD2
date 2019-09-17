@@ -24,7 +24,7 @@
         <label for="cgu">J'accepte les Conditions Générales d'Utilisation</label>
         <input name="action" type="submit" value="Mailer">
     </form>
-    <br> <br>
+    <div style = "height: 1%;"></div>
     <a href="base.php"><button>Lire la BD</button></a>
     <a href="login.php"><button>LOGIN</button></a>
 </div>

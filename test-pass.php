@@ -22,7 +22,8 @@
     } else if (isset($_POST['action']) && !empty(trim($login)) && !empty(trim($pwd)) ) {
         while ($fetch = mysqli_fetch_assoc($dbQuery))
             if ($login != $fetch['login'] && $pwd != $fetch['password']) {
-                header('Location: login.php?step=ERROR');
+                $_GET['step'] = 'ERROR';
+                header('Location: login.php');
             }  else {
                 $_GET['step'] = 'LOGIN';
                 start_page('Bienvenue');
@@ -30,6 +31,7 @@
                 end_page();
             }
     } else {
-        header('Location: login.php?step=ERROR');
+        $_GET['step'] = 'ERROR';
+        header('Location: login.php');
     }
 ?>
