@@ -1,11 +1,8 @@
 <?php
-    session_start();
     include 'utils.inc.php';
     $login = $_POST['login'];
     $pwd = $_POST['pwd'];
-    echo empty(trim($login));
-    echo empty(trim($pwd));
-// BD
+    // BD
     $dbLink = mysqli_connect('mysql-christophe.alwaysdata.net', '173824', 'admin_root26+')
     or die('Erreur de connexion au serveur : ' . mysqli_connect_error());
 
@@ -24,16 +21,21 @@
         exit();
     } else if (isset($_POST['action']) && !empty(trim($login)) && !empty(trim($pwd)) ) {
         while ($fetch = mysqli_fetch_assoc($dbQuery)) {
-            if ($login != $fetch['login'] && $pwd != $fetch['password']) {
+            if ($pwd != $fetch['password']) {
                 header('Location: login.php?step=ERREUR');
             } else {
+                session_start();
                 $_SESSION['login'] = 'ok';
-                start_page('Bienvenue');
-                echo '<h1> Bienvenue ' . $login . '</h1>' . PHP_EOL;
-                end_page();
+                $_SESSION['id'] = $login;
+                $_SESSION['pwd'] = $pwd;
             }
         }
     } else {
         header('Location: login.php?step=ERREUR');
+    }
+    if ($_SESSION['login'] == 'ok') {
+        start_page('Bienvenue');
+        echo '<h1> Bienvenue ' . $_SESSION['login'] . '</h1>' . PHP_EOL;
+        end_page();
     }
 ?>
