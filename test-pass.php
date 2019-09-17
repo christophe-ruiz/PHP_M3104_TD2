@@ -20,16 +20,17 @@
         echo 'Requête : ' . $query . '<br/>';
         exit();
     } else if (isset($_POST['action']) && !empty(trim($login)) && !empty(trim($pwd)) ) {
-        while ($fetch = mysqli_fetch_assoc($dbQuery))
+        while ($fetch = mysqli_fetch_assoc($dbQuery)) {
             if ($login != $fetch['login'] && $pwd != $fetch['password']) {
                 $_GET['step'] = 'ERROR';
                 header('Location: login.php');
-            }  else {
+            } else {
                 $_GET['step'] = 'LOGIN';
                 start_page('Bienvenue');
                 echo '<h1> Bienvenue ' . $login . '</h1>' . PHP_EOL;
                 end_page();
             }
+        }
     } else {
         $_GET['step'] = 'ERROR';
         header('Location: login.php');
