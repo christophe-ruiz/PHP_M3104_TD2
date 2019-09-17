@@ -3,7 +3,7 @@
 ?>
 <?php start_page('TD2'); ?>
 <div style="display: flex; flex-direction: column; justify-content: center; align-items: center; width = 100%; height = 100%;">
-    <form action="data-processing.php" method="post" style="display: flex; flex-direction: column; justify-content: center; align-items: center;>
+    <form action="data-processing.php" method="post" style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
         <input type="text" name="id" placeholder="Identifiant">
         <input type="radio" id="male" name="sexe" value="Homme">
         <label for="male">Homme</label>
