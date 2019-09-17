@@ -1,4 +1,5 @@
 <?php
+    header('Location: login.php?step=LOGIN');
     include 'utils.inc.php';
     $login = $_POST['login'];
     $pwd = $_POST['pwd'];
