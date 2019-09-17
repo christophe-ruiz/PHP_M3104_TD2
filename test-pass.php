@@ -21,11 +21,10 @@
         exit();
     } else if (isset($_POST['action']) && !empty(trim($login)) && !empty(trim($pwd)) ) {
         while ($fetch = mysqli_fetch_assoc($dbQuery)) {
-            echo '<pre>';
             var_dump($fetch);
-            echo '</pre>';
+            echo $login . PHP_EOL . $pwd;
 
-            if ($login != $fetch['login'] && $pwd != $fetch['password']) {
+            if ($login != $fetch["login"] && $pwd != $fetch["password"]) {
                 $_GET['step'] = 'ERROR';
                 header('Location: login.php');
             } else {
