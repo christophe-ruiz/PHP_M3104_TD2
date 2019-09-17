@@ -3,6 +3,7 @@
     start_page('Login');
     $step = $_GET['step'];
     echo $step;
+    var_dump($_GET);
 ?>
 <form method="POST" action="test-pass.php">
     <input type="text" name="login" placeholder = "Login">
