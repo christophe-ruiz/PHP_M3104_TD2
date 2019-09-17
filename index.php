@@ -2,7 +2,8 @@
     include 'utils.inc.php';
 ?>
 <?php start_page('TD2'); ?>
-    <form action="data-processing.php" method="post" style="display: flex; flex-direction: column; justify-content: center; align-items: center; width = 100%; height = 100%;">
+<div style="display: flex; flex-direction: column; justify-content: center; align-items: center; width = 100%; height = 100%;">
+    <form action="data-processing.php" method="post">
         <input type="text" name="id" placeholder="Identifiant">
         <input type="radio" id="male" name="sexe" value="Homme">
         <label for="male">Homme</label>
@@ -25,4 +26,6 @@
     </form>
     <a href="base.php"><button>SQL</button></a>
     <a href="login.php"><button>LOGIN</button></a>
+</div>
+
 <?php end_page(); ?>

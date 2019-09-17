@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="58c17461-ae49-46ea-be59-2b1687a1541c" name="ssh-christophe.alwaysdata.net" url="http://ssh-christophe.alwaysdata.net">
+        <fileTransfer host="ssh-christophe.alwaysdata.net" port="22" accessType="SFTP">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+          <option name="port" value="22" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
