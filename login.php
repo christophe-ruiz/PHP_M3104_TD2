@@ -1,7 +1,8 @@
 <?php
     include 'utils.inc.php';
     start_page('Login');
-    echo $_GET['step'];
+    $step = $_GET['step'];
+    echo $step;
 ?>
 <form method="POST" action="test-pass.php">
     <input type="text" name="login" placeholder = "Login">
