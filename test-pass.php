@@ -19,17 +19,12 @@
         // Affiche la requête envoyée.
         echo 'Requête : ' . $query . '<br/>';
         exit();
-    } else if (isset($_POST['action']) && !empty(trim($login)) && !empty(trim($pwd)) ) {
+    } else if (isset($_POST['action']) && !empty(trim($login)) && !empty(trim($pwd))) {
         while ($fetch = mysqli_fetch_assoc($dbQuery)) {
-            if ($pwd != $fetch['password']) {
-                echo 'La redirection dans le cas de mauvais identifiants ne marche pas >:(';
-                header('Location: login.php?step=ERREUR');
-            } else {
                 session_start();
                 $_SESSION['login'] = 'ok';
                 $_SESSION['id'] = $login;
                 $_SESSION['pwd'] = $pwd;
-            }
         }
     } else {
         header('Location: login.php?step=ERREUR');
@@ -38,5 +33,6 @@
         start_page('Bienvenue');
         echo '<h1> Bienvenue ' . $_SESSION['login'] . '</h1>' . PHP_EOL;
         end_page();
+    } else {
+        header('Location: login.php?step=ERREUR');
     }
-?>
