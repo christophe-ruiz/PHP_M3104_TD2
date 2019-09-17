@@ -2,6 +2,8 @@
     include 'utils.inc.php';
     $login = $_POST['login'];
     $pwd = $_POST['pwd'];
+    echo empty(trim($login));
+    echo empty(trim($pwd));
 // BD
     $dbLink = mysqli_connect('mysql-christophe.alwaysdata.net', '173824', 'admin_root26+')
     or die('Erreur de connexion au serveur : ' . mysqli_connect_error());
@@ -22,17 +24,14 @@
     } else if (isset($_POST['action']) && !empty(trim($login)) && !empty(trim($pwd)) ) {
         while ($fetch = mysqli_fetch_assoc($dbQuery)) {
             if ($login != $fetch['login'] && $pwd != $fetch['password']) {
-                $_GET['step'] = 'ERROR';
-                header('Location: login.php');
+                header('Location: login.php?step=ERREUR');
             } else {
-                $_GET['step'] = 'LOGIN';
                 start_page('Bienvenue');
                 echo '<h1> Bienvenue ' . $login . '</h1>' . PHP_EOL;
                 end_page();
             }
         }
     } else {
-        $_GET['step'] = 'ERROR';
-        header('Location: login.php');
+        header('Location: login.php?step=ERREUR');
     }
 ?>
