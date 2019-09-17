@@ -31,7 +31,7 @@
     }
     if ($_SESSION['login'] == 'ok') {
         start_page('Bienvenue');
-        echo '<h1> Bienvenue ' . $_SESSION['login'] . '</h1>' . PHP_EOL;
+        echo '<h1> Bienvenue ' . $_SESSION['id'] . '</h1>' . PHP_EOL;
         end_page();
     } else {
         header('Location: login.php?step=ERREUR');
