@@ -22,7 +22,7 @@
     } else if (isset($_POST['action']) && !empty(trim($login)) && !empty(trim($pwd)) ) {
         while ($fetch = mysqli_fetch_assoc($dbQuery)) {
             if ($pwd != $fetch['password']) {
-                echo 'La redirection dans le cas de mauvais identifiants ne marche pas >:('
+                echo 'La redirection dans le cas de mauvais identifiants ne marche pas >:(';
                 header('Location: login.php?step=ERREUR');
             } else {
                 session_start();
