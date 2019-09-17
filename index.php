@@ -26,7 +26,7 @@
     </form>
     <div style = "height: 1%;"></div>
     <a href="base.php"><button>Lire la BD</button></a>
-    <a href="login.php"><button>LOGIN</button></a>
+    <a href="login.php?step=LOGIN"><button>LOGIN</button></a>
 </div>
 
 <?php end_page(); ?>

@@ -1,5 +1,5 @@
 <?php
-    header('Location: login.php?step=LOGIN');
+    session_start();
     include 'utils.inc.php';
     $login = $_POST['login'];
     $pwd = $_POST['pwd'];
@@ -27,6 +27,7 @@
             if ($login != $fetch['login'] && $pwd != $fetch['password']) {
                 header('Location: login.php?step=ERREUR');
             } else {
+                $_SESSION['login'] = 'ok';
                 start_page('Bienvenue');
                 echo '<h1> Bienvenue ' . $login . '</h1>' . PHP_EOL;
                 end_page();
